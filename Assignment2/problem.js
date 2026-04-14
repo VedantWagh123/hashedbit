@@ -1,10 +1,10 @@
 //1 to 100 even numbers 
 
-// for(let i= 1  ; i<=100; i++){
-//     if(i%2==0){
-//         console.log(i);
-// }
-// }
+for(let i= 1  ; i<=100; i++){
+    if(i%2==0){
+        console.log(i);
+}
+}
 
 
 
@@ -19,9 +19,11 @@ function calculator(a, b, operation) {
     case '+':
       return a + b;
     case '-':
+        
       return a - b;
     case '*':
       return a * b;
+
     case '/':
       return b !== 0 ? a / b : "Cannot divide by zero";
     default:
@@ -31,8 +33,10 @@ function calculator(a, b, operation) {
 
 // Example
 console.log(calculator(10, 5, '+'));
+
 console.log(calculator(10, 5, '-'));
 console.log(calculator(10, 5, '*'));
+
 console.log(calculator(10, 5, '/'));
 
 
@@ -48,13 +52,16 @@ function findTax(salary) {
     case (salary > 500000 && salary <= 1000000):
       tax = salary * 0.10;
       break;
+
     case (salary > 1000000 && salary <= 1500000):
       tax = salary * 0.20;
       break;
+
     case (salary > 1500000):
       tax = salary * 0.30;
       break;
-    default:
+    
+      default:
       return "Invalid salary";
   }
 
@@ -62,9 +69,9 @@ function findTax(salary) {
 }
 
 // Example
-console.log(findTax(400000));
+   console.log(findTax(400000));
 console.log(findTax(800000));
-console.log(findTax(1200000));
+  console.log(findTax(1200000));
 console.log(findTax(2000000));
 
 
