@@ -138,3 +138,51 @@ function reverseString(str) {
 }
 
 console.log(reverseString("Hello"));
+
+
+
+
+
+// write the code to find the average oas mentione above use array and object methods 
+
+let data = [
+  {
+    student1: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    student2: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    student3: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  }
+// ];
+
+// let output = data.map(obj => {
+//   let key = Object.keys(obj)[0];
+//   let marks = Object.values(obj[key]);
+
+//   let total = marks.reduce((sum, m) => sum + m, 0);
+//   let avg = Math.floor(total / marks.length);
+
+//   return { [key]: { average: avg } };
+// });
+
+// console.log(output);
