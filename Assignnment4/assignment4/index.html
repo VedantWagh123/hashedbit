@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Editor</title>
+ 
+</head>
+<body>
+
+<div class='text-here' id='text-container'>This is some example text</div>
+
+<input type="text" id="colorbox">
+<button id="colorchange">Change Colour</button>
+
+<br><br>
+
+<input type="range" id="fontsize" min="10" max="100" value="55">
+
+<br><br>
+
+<button id="italic" class="stylebt">Italics</button>
+<button id="underline" class="stylebt">Underline</button>
+<button id="bold" class="stylebt">Bold</button>
+
+<br><br>
+
+<select id="list">
+    <option value="serif">Serif</option>
+    <option value="sans-serif">Sans-Serif</option>
+    <option value="monospace">Monospace</option>
+    <option value="cursive">Cursive</option>
+    <option value="fantasy">Fantasy</option>
+</select>
+
+<br><br>
+
+<button id="getstyle">Get CSS</button>
+
+<br><br>
+<p id="css-props"></p>
+ <script>
+const text = document.getElementById("text-container");
+
+// color change
+document.getElementById("colorchange").onclick = function () {
+  const color = document.getElementById("colorbox").value;
+  text.style.color = color;
+};
+
+// font size
+document.getElementById("fontsize").oninput = function () {
+  text.style.fontSize = this.value + "px";
+};
+
+ 
+document.getElementById("italic").onclick = function () {
+  text.style.fontStyle =
+    text.style.fontStyle === "italic" ? "normal" : "italic";
+};
+
+ 
+document.getElementById("underline").onclick = function () {
+  text.style.textDecoration =
+    text.style.textDecoration === "underline" ? "none" : "underline";
+};
+
+ 
+document.getElementById("bold").onclick = function () {
+  text.style.fontWeight =
+    text.style.fontWeight === "bold" ? "normal" : "bold";
+};
+  
+document.getElementById("list").onchange = function () {
+  text.style.fontFamily = this.value;
+};
+ 
+document.getElementById("getstyle").onclick = function () {
+  let styles = "";
+
+  const color = text.style.color || "black";
+  const size = text.style.fontSize || "55px";
+  const family = text.style.fontFamily || "sans-serif";
+
+  styles += "color: " + color + "; ";
+  styles += "font-size: " + size + "; ";
+
+  if (text.style.fontWeight === "bold")
+    styles += "font-weight: bold; ";
+
+  if (text.style.fontStyle === "italic")
+    styles += "font-style: italic; ";
+
+  if (text.style.textDecoration === "underline")
+    styles += "text-decoration: underline; ";
+
+  styles += "font-family: " + family + "; ";
+
+  document.getElementById("css-props").innerText = styles;
+};
+</script>
+
+</body>
+</html>
