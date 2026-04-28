@@ -1,0 +1,35 @@
+.app {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.navbar {
+  background-color: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1.2rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #e50914;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px 0 60px;
+}
